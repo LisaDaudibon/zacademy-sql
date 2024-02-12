@@ -1,4 +1,15 @@
 version: '3.8'
+services:
+  zmdb:
+    image: postgres:16-alpine
+    ports:
+      - 5432:5432
+    restart: unless-stopped
+    environment:
+      USERNAME: postgres
+      POSTGRES_PASSWORD: lisa
+      POSTGRES_DB: lisa_zmdb
+
 
 # 😇 you can do it
 # https://youtu.be/dQw4w9WgXcQ?si=EbCGbCfEnju0Ta-W
